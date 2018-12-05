@@ -9,6 +9,11 @@ body{
     font-family:'Noto Sans', sans-serif;
 }
 
+.contact{
+    align-self: center;
+    justify-self: center;
+}
+
 header{
     grid-area:header;
     background-color:lightblue;
@@ -54,4 +59,16 @@ footer{
     "section aside"
     "footer footer"
     ;
+}
+#container_contact{
+        min-height:100vh;
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 40px 25px 1fr 40px; 
+        grid-template-areas: 
+        "header header header"
+        "nav nav nav"
+        ". section ."
+        "footer footer footer"
+        ;
 }
