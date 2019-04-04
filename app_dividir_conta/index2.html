@@ -15,15 +15,12 @@
         <div id = 'resultado'></div>
     </body>
     <script>
-            document.getElementById("calcular").onclick = calcula;
-            
-            function calcula(){
+            document.querySelector("#calcular").addEventListener('click',function(){
                 let pessoas =  document.getElementById("pessoas").value;
                 let total = document.getElementById("total").value;
                 let valor = total/pessoas;
-                document.getElementById("conteudo").hidden = true;
+                document.getElementById("conteudo").hidden = false;
                 document.getElementById("resultado").innerHTML = "O valor para cada pessoa é de R$"+parseFloat(valor.toFixed(2));
-
-            }
+            });
         </script>
 </html>
