@@ -1,3 +1,4 @@
 <?php
-    var_dump($_POST);
+    $conteudo['mensagem'] = $_POST['mensagem'];
+    echo json_encode($conteudo);
 ?>
