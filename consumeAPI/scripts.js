@@ -13,19 +13,51 @@ request.onload = function() {
     console.log('error')
   }
 }
+request.send();
 
-request.send()*/
-const url = "https://ghibliapi.herokuapp.com/films";
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*const url = "https://ghibliapi.herokuapp.com/films";
+fetch(url)
+.then(response=> response.json())
+.then(json=>console.log(json))
+.catch(error => console.error(error))
+
+request.send()
+*/
+
+
+
+const url = "https://randomuser.me/api/";
 fetch(url)
 .then(response=> response.json())
 .then(json=>{
-              json.forEach(movie => {
-                  console.log(movie.title)
-              })  
-            }
-      )
+    document.querySelector('.genero').innerHTML=json.results[0].gender;
+    document.querySelector('.nome').innerHTML=json.results[0].name.first;
+  }
+)
 
-/*
+
+
+
+
+
+      /*
 const url = "https://ghibliapi.herokuapp.com/films";
 fetch(url)
 .then(response=> response.json())
